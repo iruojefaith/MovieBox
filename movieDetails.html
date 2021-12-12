@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie DB</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/014a14165b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <body onload = "loadMovieDetails()">
+        <div class="main-wrapper">
+
+            <nav>
+                <div class="main-nav main-nav-details">
+                    <h1>Movies DB</h1>
+
+                    <div class="harmburger" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+
+                <div id="nav-bar">
+                    <a href="index.html">Home</a>
+                    <a href="#footer">Find me</a>
+                </div>
+
+                <div class="search-div">
+                <div class="search-div" id="search-dektop">
+                    <input type="text" name="name" class="search-movie" placeholder="Search for a movie..">
+                </div>
+
+                </div>
+            </nav>
+            <div class="big-card">
+                <div class="image-container">
+                <img src="" alt="" id="movie-img">
+            </div>
+                <div class="container">
+                    <h1 id="movie-title"></h1>
+                    <p id="release-date"></p>
+                    <p id="rating"></p>
+                        <div class="website">
+                            <a href="" id="website-link">Website</a>
+                            <button class="trailer-button">
+                                <i class="fas fa-play"></i>
+                                Play Trailer
+                            </button>
+                        </div>
+                        <div class="movie-trailer">
+                            <button class="close-button">
+                                <i class="far fa-window-close"></i>
+                            </button>
+                                <iframe width="400" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="i-frame"></iframe>
+                          </div>
+
+
+
+                    <h4 id="overview">Overview</h4>
+                    <p id="movie-overview"></p>
+                    <p id="genre"></p>
+
+                    <button type="submit" id="similar">See Similar Movies</button>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="online">
+                    <h2>Find me online</h2>
+                    <ul>
+                        <li><a href="https://twitter.com/folacodes"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/folarmi"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/folasayo-akinyosoye"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://web.facebook.com/folasayo.oluwaseyi"><i class="fab fa-facebook-square"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                <h3> Made with <span class="heart">&#10084;</span> by Iruoje </h3>
+            </div>
+            </footer>
+
+        </div>
+        <script src="app.js"></script>
+        <script src="app2.js"></script>
+        <script src="app3.js"></script>
+        <script src="app4.js"></script>
+</body>
+</html>
