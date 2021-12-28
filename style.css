@@ -137,9 +137,22 @@ section .imageContainer {
 .content-display {
 	display: block;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
 	flex-wrap: wrap;
 	align-items: center;
+}
+
+.overlay-content {
+position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: none;
 }
 .content div {
 	margin: 10px;

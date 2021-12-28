@@ -6,6 +6,7 @@ const searchButton = document.querySelector('#search');;
 const searchInput = document.querySelector('#exampleInputEmail1');
 const moviesContainer = document.querySelector('#movies-container');
 const moviesSearchable = document.querySelector('#movies-searchable');
+const overlayContainer = document.querySelector("#overlay-content")
 function createImageContainer(imageUrl, id) {
     const tempDiv = document.createElement('div');
     tempDiv.setAttribute('class', 'imageContainer');
@@ -37,6 +38,7 @@ function insertIframeIntoContent(video, content) {
     const iframe = createIframe(video);
     videoContent.appendChild(iframe);
     content.appendChild(videoContent);
+    overlayContainer.appendChild(content);
 }
 function createVideoTemplate(data) {
     const content = this.content;
@@ -115,14 +117,17 @@ document.onclick = function (event) {
     const { tagName, id } = event.target;
     if (tagName.toLowerCase() === 'img') {
         const movieId = event.target.dataset.movieId;
-        const section = event.target.parentElement.parentElement;
-        const content = section.nextElementSibling;
+        const content = document.createElement('div');
+        overlayContainer.appendChild(content);
         content.classList.add('content-display');
+        overlayContainer.style.display = "block";
         getVideosByMovieId(movieId, content);
     }
     if (id === 'content-close') {
         const content = event.target.parentElement;
         content.classList.remove('content-display');
+          overlayContainer.style.display = "none";
+          overlayContainer.innerHTML = ""
     }
 }
 
